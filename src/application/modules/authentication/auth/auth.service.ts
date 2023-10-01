@@ -14,7 +14,7 @@ import { Status } from '@/application/modules/authorization/statuses/entities/st
 import { StatusEnum } from '@/application/modules/authorization/statuses/statuses.enum';
 import { MailService } from '@/application/modules/mail/mail.service';
 import { User } from '@/application/modules/users/entities/user.entity.typeorm';
-import { UsersService } from '@/application/modules/users/users.service';
+import { UsersService } from '@/application/modules/users/users.service.typeorm';
 import { NullableType } from '@/application/utils/types/nullable.type';
 import {
   HttpException,
