@@ -15,6 +15,7 @@ import { HomeModule } from '@/application/modules/home/home.module';
 import { UsersModule } from '@/application/modules/users/users.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { MailerModule } from './application/facilities/mailer/mailer.module';
@@ -54,6 +55,7 @@ import { TypeOrmConfigService } from './database/typeorm-config.service';
         return new DataSource(options).initialize();
       },
     }),
+    MongooseModule.forRoot('mongodb://localhost/brocoders'),
     I18nModule.forRootAsync({
       useFactory: (configService: ConfigService<AllConfigType>) => ({
         fallbackLanguage: configService.getOrThrow('app.fallbackLanguage', {

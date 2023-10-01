@@ -1,6 +1,6 @@
 import { DeepPartial, Not, Repository } from 'typeorm';
 
-import { User } from '@/application/modules/users/entities/user.entity';
+import { User } from '@/application/modules/users/entities/user.entity.typeorm';
 import { FindOptions } from '@/application/utils/types/find-options.type';
 import { NullableType } from '@/application/utils/types/nullable.type';
 import { Injectable } from '@nestjs/common';

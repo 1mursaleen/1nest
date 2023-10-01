@@ -13,7 +13,7 @@ import { RoleEnum } from '@/application/modules/authorization/roles/roles.enum';
 import { Status } from '@/application/modules/authorization/statuses/entities/status.entity';
 import { StatusEnum } from '@/application/modules/authorization/statuses/statuses.enum';
 import { MailService } from '@/application/modules/mail/mail.service';
-import { User } from '@/application/modules/users/entities/user.entity';
+import { User } from '@/application/modules/users/entities/user.entity.typeorm';
 import { UsersService } from '@/application/modules/users/users.service';
 import { NullableType } from '@/application/utils/types/nullable.type';
 import {

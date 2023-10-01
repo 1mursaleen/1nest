@@ -2,7 +2,7 @@ import { Repository } from 'typeorm';
 
 import { RoleEnum } from '@/application/modules/authorization/roles/roles.enum';
 import { StatusEnum } from '@/application/modules/authorization/statuses/statuses.enum';
-import { User } from '@/application/modules/users/entities/user.entity';
+import { User } from '@/application/modules/users/entities/user.entity.typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 

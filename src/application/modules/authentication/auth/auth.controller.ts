@@ -1,4 +1,4 @@
-import { User } from '@/application/modules/users/entities/user.entity';
+import { User } from '@/application/modules/users/entities/user.entity.typeorm';
 import { NullableType } from '@/application/utils/types/nullable.type';
 import {
   Body,

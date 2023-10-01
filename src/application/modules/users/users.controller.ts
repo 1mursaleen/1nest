@@ -25,13 +25,13 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from './entities/user.entity';
+import { User } from './entities/user.entity.typeorm';
 import { UsersService } from './users.service';
 
-@ApiBearerAuth()
-@Roles(RoleEnum.admin)
-@UseGuards(AuthGuard('jwt'), RolesGuard)
-@ApiTags('Users')
+// @ApiBearerAuth()
+// @Roles(RoleEnum.admin)
+// @UseGuards(AuthGuard('jwt'), RolesGuard)
+// @ApiTags('Users')
 @Controller({
   path: 'users',
   version: '1',
@@ -48,9 +48,9 @@ export class UsersController {
     return this.usersService.create(createProfileDto);
   }
 
-  @SerializeOptions({
-    groups: ['admin'],
-  })
+  //   @SerializeOptions({
+  //     groups: ['admin'],
+  //   })
   @Get()
   @HttpCode(HttpStatus.OK)
   async findAll(
