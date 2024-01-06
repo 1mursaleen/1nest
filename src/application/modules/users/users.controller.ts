@@ -28,10 +28,10 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity.typeorm';
 import { UsersService } from './users.service.typeorm';
 
-// @ApiBearerAuth()
-// @Roles(RoleEnum.admin)
-// @UseGuards(AuthGuard('jwt'), RolesGuard)
-// @ApiTags('Users')
+@ApiBearerAuth()
+@Roles(RoleEnum.admin)
+@UseGuards(AuthGuard('jwt'), RolesGuard)
+@ApiTags('Users')
 @Controller({
   path: 'users',
   version: '1',
